@@ -71,7 +71,7 @@ this.context=context;
     protected void onPostExecute(String result) {
         progressDialog.dismiss();
         Intent intent=new Intent(context, JokePreviewActivity.class);
-        intent.putExtra("selectedJoke",result);
+        intent.putExtra(context.getResources().getString(com.kamal.marcus.jokepreviewactivity.R.string.selected_joke_string_key),result);
         context.startActivity(intent);
     }
 }

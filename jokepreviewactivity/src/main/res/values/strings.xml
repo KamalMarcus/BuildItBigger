@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Joke PreviewActivity</string>
+    <string name="selected_joke_string_key">selectedJoke</string>
 </resources>

@@ -22,20 +22,20 @@ import static org.hamcrest.Matchers.not;
 /**
  * Created by KiMoo on 30/05/2017.
  */
-
 @RunWith(AndroidJUnit4.class)
-public class EndpointsAsyncTaskTest {
+public class EndpointAsyncTaskTest {
     @Rule
-    public ActivityTestRule<MainActivity> mActivityRule =
+    public ActivityTestRule<MainActivity> activityTestRule =
             new ActivityTestRule<>(MainActivity.class);
 
     @Test
-    public void aSyncTaskNotNull(){
-        onView(withId(R.id.instructions_text_view)).perform(click());
+    public void resultNotNull(){
+        onView(withId(R.id.get_jokes_button)).perform(click());
         onView(withText(startsWith(""))).
                 inRoot(withDecorView(
-                        not(is(mActivityRule.getActivity().
+                        not(is(activityTestRule.getActivity().
                                 getWindow().getDecorView())))).
                 check(matches(isDisplayed()));
     }
+
 }

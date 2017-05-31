@@ -12,6 +12,6 @@ public class JokePreviewActivity extends Activity {
         setContentView(R.layout.activity_joke_preview);
 
         TextView selectedJokeTextView= (TextView) findViewById(R.id.selected_joke_text_view);
-        selectedJokeTextView.setText(getIntent().getStringExtra("selectedJoke"));
+        selectedJokeTextView.setText(getIntent().getStringExtra(getResources().getString(R.string.selected_joke_string_key)));
     }
 }
